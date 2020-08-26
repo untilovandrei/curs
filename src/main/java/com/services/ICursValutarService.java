@@ -1,9 +1,12 @@
 package com.services;
 
-import java.util.List;
+import com.dto.CursValutarDTO;
 import com.entities.CursValutar;
 
 public interface ICursValutarService {
-      List<CursValutar> findAll();
-      void save(CursValutar cursValutar);
+  public CursValutarDTO findById(long id);
+  public String save(CursValutarDTO cursValutarDTO);
+  public String udpdate(CursValutarDTO cursValutarDTO);
+  public CursValutarDTO findByCodValuta(String codValuta);
+  
 }
